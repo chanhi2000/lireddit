@@ -22,13 +22,14 @@
 - `yarn add -D @types/node typescript`
 - `yarn add -D ts-node`
 - `yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgresql pg`
+- `npx mikro-orm migration:create`
 
 
 ## Outline
 
 ### Section 1
  - ~~[v0.0.1][v0.0.1] : Project Setup~~
- - [v0.0.2][v0.0.2] : mikroORM Setup
+ - ~~[v0.0.2][v0.0.2] : mikroORM Setup~~
  - [v0.0.3][v0.0.3] : Apollo SErver Express Setup
  - [v0.0.4][v0.0.4] : mikroORM TypeGraphQL Crud
 
