@@ -25,6 +25,7 @@
 - `yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgresql pg`
 - `npx mikro-orm migration:create`
 - `yarn add express apollo-server-express graphql type-graphql`
+- `yarn add reflect-metadata`
 
 ## Docker Setup
 
@@ -53,13 +54,73 @@ docker exec -it postgres bash
  - Connect to database : `\c <DATABASE_NAME>`
  - List Relation : `\d`
 
+
+## Apollo Server 
+ - port: 4000
+ - GraphQL playground url: http://localhost:4000/graphql
+
+#### Query All `Posts`
+```graphql
+{
+  posts {
+    id
+    createdAt
+    updateAt
+    title
+  }
+}
+```
+#### Query `Post`
+ 
+```graphql
+{
+  post(id: <ID>) {
+    title
+  }
+}
+```
+
+#### Create `Post`
+
+```graphql
+mutation {
+  createPost(title: "post from graphql") {
+    id
+    createdAt
+    updateAt
+    title
+  }
+}
+```
+
+#### Update `Post`
+
+```graphql
+mutation {
+  updatePost(id: <ID>, title: "bobb") {
+    id
+    createdAt
+    updateAt
+    title
+  }
+}
+```
+
+#### Delete `Post`
+
+```graphql
+mutation {
+  deletePost(id: <ID>)
+}
+```
+
 ## Outline
 
 ### Section 1
  - ~~[v0.0.1][v0.0.1] : Project Setup~~
  - ~~[v0.0.2][v0.0.2] : mikroORM Setup~~
  - ~~[v0.0.3][v0.0.3] : Apollo Server Express Setup~~
- - [v0.0.4][v0.0.4] : mikroORM TypeGraphQL Crud
+ - ~~[v0.0.4][v0.0.4] : mikroORM TypeGraphQL Crud~~
 
 ### Section 2
  - [v0.1.0][v0.1.0] : Register
