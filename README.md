@@ -24,6 +24,7 @@
 - `yarn add -D ts-node`
 - `yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgresql pg`
 - `npx mikro-orm migration:create`
+- `yarn add express apollo-server-express graphql type-graphql`
 
 ## Docker Setup
 
@@ -57,7 +58,7 @@ docker exec -it postgres bash
 ### Section 1
  - ~~[v0.0.1][v0.0.1] : Project Setup~~
  - ~~[v0.0.2][v0.0.2] : mikroORM Setup~~
- - [v0.0.3][v0.0.3] : Apollo SErver Express Setup
+ - ~~[v0.0.3][v0.0.3] : Apollo Server Express Setup~~
  - [v0.0.4][v0.0.4] : mikroORM TypeGraphQL Crud
 
 ### Section 2
