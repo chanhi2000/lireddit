@@ -10,11 +10,12 @@
  - `GraphQL`
  - `URQL/Apollo`
  - `Node.js`
- - `PostgreSQL`
+ - `Docker`/`PostgreSQL`
  - `MikroOrm/TypeORM`
  - `Redis`
  - `Next.js`
  - `TypeGraphQL`
+
 
 ### Commands Used
 
@@ -24,6 +25,32 @@
 - `yarn add @mikro-orm/cli @mikro-orm/core @mikro-orm/migrations @mikro-orm/postgresql pg`
 - `npx mikro-orm migration:create`
 
+## Docker Setup
+
+### A. Pull Postgresql DB Image
+
+```bash
+docker pull postgres:13-alpine
+```
+
+### B. Run The Image
+
+```bash
+docker run --name postrgres -d -it -e POSTGRES_PASSWORD=ginnosystems -p 5432:5432 postgres:13-alpine
+```
+
+### Execute
+
+```bash
+docker exec -it postgres bash
+```
+
+### Key `psql` commands 
+ - connect to DB Client : `psql -U postgres`
+ - List roles : `\du` 
+ - List databas1es : `\l`
+ - Connect to database : `\c <DATABASE_NAME>`
+ - List Relation : `\d`
 
 ## Outline
 
@@ -97,9 +124,11 @@
 ## Reference
  - [Ben Awad][github]
  - [Full Tutorial][tut]
+ - [Docker and PostgreSQL in 10 Minutes][yt] 
 
 [github]: https://github.com/benawad
 [tut]: https://youtu.be/I6ypD7qv3Z8
+[yt]: https://www.youtube.com/watch?v=aHbE3pTyG-Q
 
 [v0.0.1]: http://203.236.231.101:3000/EDUCATION/lireddit/src/v0.0.1
 [v0.0.2]: http://203.236.231.101:3000/EDUCATION/lireddit/src/v0.0.2

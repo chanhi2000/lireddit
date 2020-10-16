@@ -7,7 +7,7 @@ export default {
     type: 'postgresql',
     dbName: 'lireddit',
     user: 'postgres',
-    host: '203.236.216.63',
+    host: 'localhost',
     port: 5432,
     password: 'ginnosystems',
     entities: [Post],
