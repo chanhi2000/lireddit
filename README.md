@@ -120,10 +120,31 @@ mutation {
 ```graphql
 mutation {
   register(options: {username: "ben", password: "ben"}) {
-    id
-    createdAt
-    updatedAt
-    username
+    errors {
+      field
+      message
+    }
+    user {
+      id
+      username
+    }
+  }
+}
+```
+
+#### Login `User`
+
+```graphql
+mutation {
+  login(options: {username: "ben", password: "ben"}) {
+    errors {
+      field
+      message
+    }
+    user {
+      id
+      username
+    }
   }
 }
 ```
@@ -138,7 +159,7 @@ mutation {
 
 ### Section 2
  - ~~[v0.1.0][v0.1.0] : Register~~
- - [v0.1.1][v0.1.0] : Login and Validation
+ - ~~[v0.1.1][v0.1.0] : Login and Validation~~
  - [v0.1.2][v0.1.2] : Sessions
  - [v0.1.3][v0.1.3] : Session More Info
  - [v0.1.4][v0.1.4] : Move Stuff
