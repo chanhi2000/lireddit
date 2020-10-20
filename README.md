@@ -26,6 +26,7 @@
 - `npx mikro-orm migration:create`
 - `yarn add express apollo-server-express graphql type-graphql`
 - `yarn add reflect-metadata`
+- `yarn add argon2`
 
 ## Docker Setup
 
@@ -114,6 +115,19 @@ mutation {
 }
 ```
 
+#### Register `User`
+
+```graphql
+mutation {
+  register(options: {username: "ben", password: "ben"}) {
+    id
+    createdAt
+    updatedAt
+    username
+  }
+}
+```
+
 ## Outline
 
 ### Section 1
@@ -123,7 +137,7 @@ mutation {
  - ~~[v0.0.4][v0.0.4] : mikroORM TypeGraphQL Crud~~
 
 ### Section 2
- - [v0.1.0][v0.1.0] : Register
+ - ~~[v0.1.0][v0.1.0] : Register~~
  - [v0.1.1][v0.1.0] : Login and Validation
  - [v0.1.2][v0.1.2] : Sessions
  - [v0.1.3][v0.1.3] : Session More Info
@@ -161,7 +175,7 @@ mutation {
  - [v0.2.18][v0.2.18] : Vote Status
  - [v0.2.19][v0.2.19] : SSR Cookie
  
- ### Section 4
+### Section 4
  - [v0.3.1][v0.3.1] : Single Post
  - [v0.3.2][v0.3.2] : Delete Post
  - [v0.3.3][v0.3.3] : Edit Post
