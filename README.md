@@ -27,25 +27,38 @@
 - `yarn add express apollo-server-express graphql type-graphql`
 - `yarn add reflect-metadata`
 - `yarn add argon2`
+- `yarn add redis connect-redis express-session`
+- `yarn add -D @types/redis @types/connect-redis @types/express-session`
 
 ## Docker Setup
 
-### A. Pull Postgresql DB Image
+### A1. Pull Postgresql DB Image
 
 ```bash
 docker pull postgres:13-alpine
 ```
 
-### B. Run The Image
+### A2. Run the Image
 
 ```bash
 docker run --name postrgres -d -it -e POSTGRES_PASSWORD=ginnosystems -p 5432:5432 postgres:13-alpine
 ```
 
-### Execute
+### A3. Execute
 
 ```bash
 docker exec -it postgres bash
+```
+
+### B1. Pull Redis Image
+
+```bash
+docker pull redis:alpine
+```
+
+### B2. Run the Image
+```bash
+docker run --name redis -d -it -p 6380:6380 redis:alpine
 ```
 
 ### Key `psql` commands 
@@ -149,6 +162,14 @@ mutation {
 }
 ```
 
+#### Change Playground settings for cookies to be received
+
+```json
+...
+"request.credentials": "omit",
+...
+```
+
 ## Outline
 
 ### Section 1
@@ -160,7 +181,7 @@ mutation {
 ### Section 2
  - ~~[v0.1.0][v0.1.0] : Register~~
  - ~~[v0.1.1][v0.1.0] : Login and Validation~~
- - [v0.1.2][v0.1.2] : Sessions
+ - ~~[v0.1.2][v0.1.2] : Sessions~~
  - [v0.1.3][v0.1.3] : Session More Info
  - [v0.1.4][v0.1.4] : Move Stuff
  - [v0.1.5][v0.1.5] : NextJS Chakra

@@ -82,7 +82,7 @@ export class UserResolver {
     @Mutation(() => UserResponse)
     async login(
         @Arg('options', () => UsernamePasswordInput) options: UsernamePasswordInput,
-        @Ctx() {em}: MyContext
+        @Ctx() {em, req }: MyContext
     ): Promise<UserResponse> {
 
         if (options.username.length <= 2) {
@@ -128,6 +128,8 @@ export class UserResolver {
                 ],
             }
         }
+
+        req.session.userId = user.id
 
          
         return {
