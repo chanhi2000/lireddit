@@ -162,6 +162,17 @@ mutation {
 }
 ```
 
+#### Find Who's logged in
+
+```graphql
+{
+  me {
+    id 
+    username
+  }
+}
+```
+
 #### Change Playground settings for cookies to be received
 
 ```json
@@ -182,7 +193,7 @@ mutation {
  - ~~[v0.1.0][v0.1.0] : Register~~
  - ~~[v0.1.1][v0.1.0] : Login and Validation~~
  - ~~[v0.1.2][v0.1.2] : Sessions~~
- - [v0.1.3][v0.1.3] : Session More Info
+ - ~~[v0.1.3][v0.1.3] : Session More Info~~
  - [v0.1.4][v0.1.4] : Move Stuff
  - [v0.1.5][v0.1.5] : NextJS Chakra
  - [v0.1.6][v0.1.6] : URQL Basic
