@@ -30,7 +30,8 @@
 - `yarn add redis connect-redis express-session`
 - `yarn add -D @types/redis @types/connect-redis @types/express-session`
 - `yarn create next-app --example with-chakra-ui lireddit-web`
-
+- `yarn add --dev typescript @types/node`
+- `yarn add formik`
 ## Docker Setup
 
 ### A1. Pull Postgresql DB Image
@@ -196,7 +197,7 @@ mutation {
  - ~~[v0.1.2][v0.1.2] : Sessions~~
  - ~~[v0.1.3][v0.1.3] : Session More Info~~
  - ~~[v0.1.4][v0.1.4] : Move Stuff~~
- - [v0.1.5][v0.1.5] : NextJS Chakra
+ - ~~[v0.1.5][v0.1.5] : NextJS Chakra~~
  - [v0.1.6][v0.1.6] : URQL Basic
  - [v0.1.7][v0.1.7] : GraphQL Codegen
  - [v0.1.8][v0.1.8] : Register Errors
